@@ -48,7 +48,7 @@ function pesquisa() {
 
     const livro = livroInput.value
     const capitulo = capInput.value
-    const versiculo = verInput.value
+    const versiculo = verInput.value    
 
     if (versiculo == null || versiculo == '' || versiculo == 0) {
         cap(livro, capitulo)
@@ -56,5 +56,3 @@ function pesquisa() {
         ver(livro, capitulo, versiculo)
     }
 }
-
-pesquisa()
