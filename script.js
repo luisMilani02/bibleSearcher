@@ -1,7 +1,8 @@
 const URL = 'https://bible-api.com/'
 
 const textos = document.getElementById('textos')
-
+const regexVer = /^[1-9-]+&/
+const regexCap = /^[1-9]/
 
 async function ver(livro, capitulo, vesr) {
     const resp = await fetch(URL + livro + '+' + capitulo + ':' + vesr + '?translation=almeida')
@@ -18,7 +19,7 @@ async function ver(livro, capitulo, vesr) {
         const text = document.createElement('p')
         text.textContent = verse.verse + ' - ' + verse.text
         textos.appendChild(text)
-        console.log(verse.verse + ' - ' + verse.text)
+        // console.log(verse.verse + ' - ' + verse.text)
     }
 }
 
@@ -37,7 +38,7 @@ async function cap(livro, capitulo) {
         const text = document.createElement('p')
         text.textContent = verse.verse + ' - ' + verse.text
         textos.appendChild(text)
-        console.log(verse.verse + ' - ' + verse.text)
+        // console.log(verse.verse + ' - ' + verse.text)
     }
 }
 
@@ -51,8 +52,20 @@ function pesquisa() {
     const versiculo = verInput.value    
 
     if (versiculo == null || versiculo == '' || versiculo == 0) {
-        cap(livro, capitulo)
+        if (regexCap.test(capitulo)) {
+            cap(livro, capitulo)
+        } else {
+            erro('capitulo')
+        }
     } else {
-        ver(livro, capitulo, versiculo)
+        if (regexVer.test(versiculo)) {
+            ver(livro, capitulo, versiculo)
+        } else {
+            erro('versiculo')
+        }
     }
+}
+
+function erro(tipo) {
+    return alert(`Insira um valor valido no ${tipo}`)
 }

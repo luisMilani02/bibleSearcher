@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <label for="livro">Digite o livro desejado</label>
-    <input type="text" name="livro" id="livro"><br>
-    <label for="cap">Digite o capitulo desejado</label>
-    <input type="number" name="cap" id="cap"><br>
-    <label for="vers">Digite o versiculo desejado (opcional)</label>
-    <input type="number" name="vers" id="ver"><br><br><br>
+    <section class="inputs">
+        <!-- <label for="livro">Digite o livro desejado</label> -->
+        <input type="text" name="livro" id="livro" placeholder="Livro desejado">
 
-    <button onclick="pesquisa()">Pesquiar</button>
+        <!-- <label for="cap">Digite o capitulo desejado</label> -->
+        <input type="number" name="cap" id="cap" placeholder="Capitulo desejado">
+
+        <!-- <label for="versiculo">Digite o versiculo desejado (opcional)</label> -->
+        <input type="text" name="versiculo" id="ver" placeholder="Versiculo desejado">
+
+        <button onclick="pesquisa()">Pesquiar</button>
+    </section>
 
     <section id="textos"></section>
 
