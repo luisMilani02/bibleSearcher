@@ -89,7 +89,6 @@ h2 {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    /* border: 2px solid white; */
     border-radius: 15px;
     box-shadow: 0 0 10px white;
     padding: 15px;
@@ -112,6 +111,21 @@ section:hover {
     background-color: rgb(24, 24, 24);
     overflow-y: scroll;
     transition-duration: 250ms;
+}
+
+span {
+    display: flex;
+    height: 100%; 
+    width: 100%; 
+    align-items: center;
+    text-align: center; 
+    justify-content: center;
+}
+
+#incioP {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(226, 226, 226);
 }
 
 @media (min-width: 1300px) {
@@ -144,8 +158,8 @@ section:hover {
         font-size: 14px;
     }
 
-    span > p {
-        font-size: 10px;
+    #inicioP {
+        font-size: 20px;
     }
 
     p {
