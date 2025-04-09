@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible</title>
+    <title>Biblia</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/webkit.css?v=3">
 </head>
 <body>
+    <header>
+        <h1>Biblia</h1>
+    </header>
+
     <section class="inputs">
-        <!-- <label for="livro">Digite o livro desejado</label> -->
-        <input type="text" name="livro" id="livro" placeholder="Livro desejado">
+        <input type="text" name="livro" id="livro" placeholder="Livro">
 
-        <!-- <label for="cap">Digite o capitulo desejado</label> -->
-        <input type="number" name="cap" id="cap" placeholder="Capitulo desejado">
+        <input type="number" name="cap" id="cap" placeholder="Capitulo" min="1">
 
-        <!-- <label for="versiculo">Digite o versiculo desejado (opcional)</label> -->
-        <input type="text" name="versiculo" id="ver" placeholder="Versiculo desejado">
+        <input type="text" name="versiculo" id="ver" placeholder="Versiculo (opcional)">
 
         <button onclick="pesquisa()">Pesquiar</button>
     </section>
 
-    <section id="textos"></section>
+    <section id="textos" class="textos">
+        <span style="display: flex;align-items: center;
+        height: 100%; width: 100%; text-align: center; justify-content: center;">
+            <p style="text-align: center; font-size: 30px; color: rgb(226, 226, 226);">Faça uma pesquisa para iniciar</p>
+        </span>
+    </section>
 
     <script src="script.js"></script>
 </body>

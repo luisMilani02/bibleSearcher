@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height: 90%;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: aquamarine;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #323539; 
+    border-radius: 25px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]::-moz-inner-spin-button,
+input[type="number"]::-moz-outer-spin-button {
+    -moz-appearance: none;
+    margin: 0;
+}
