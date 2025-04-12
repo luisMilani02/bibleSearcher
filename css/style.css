@@ -35,6 +35,12 @@ h1 {
     padding: 4px;
 }
 
+select {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+}
+
 button {
     width: 100px;
     height: 40px;

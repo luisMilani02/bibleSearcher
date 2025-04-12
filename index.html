@@ -14,13 +14,20 @@
     </header>
 
     <section class="inputs">
-        <input type="text" name="livro" id="livro" placeholder="Livro">
+        <!-- <input type="text" name="livro" id="livro" placeholder="Livro"> -->
+        <select name="livro" id="livro">
+            <option value="Selecione" selected disabled>Selecione</option>
+        </select>
 
-        <input type="number" name="cap" id="cap" placeholder="Capitulo" min="1">
+        <!-- <input type="number" name="cap" id="cap" placeholder="Capitulo" min="1"> -->
+        <select name="cap" id="cap">
+            <option value="Selecione" selected disabled>Selecione</option>
+        </select>
 
         <input type="text" name="versiculo" id="ver" placeholder="Versiculo (opcional)">
 
         <button onclick="pesquisa()">Pesquiar</button>
+        <button onclick="addLivro()" id="criar">Sasas</button>
     </section>
 
     <section id="textos" class="textos">
@@ -29,6 +36,7 @@
         </span>
     </section>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/selects.js"></script>
 </body>
 </html>
